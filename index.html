@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="./main.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Raleway:wght@300&display=swap"
+    rel="stylesheet">
+
+  <title>DNC Coffee</title>
+</head>
+
+<body style="background-color:#F6F5FB">
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+        Dnc Coffee
+      </a>
+      <div class="navbar-collapse navbar-expand-sm">
+        <ul class="navbar-nav">
+          <li class="nav-item ps-3">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item ps-3">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#sobre">Sobre</a>
+          </li>
+          <li class="nav-item ps-3">
+            <a class="nav-link" href="#" id="open-modal" onclick="openModal()">Atendimento</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex">
+        <a href="#" class="btn btn-outline-secondary rounded-pill text-dark">Fazer Pedido</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container-fluid m-0 p-0">
+    <img src="./assets/images/banner.png" class="object-fit-none" width="100%" height="300">
+  </section>
+
+  <main class="card-group">
+    <article class="card m-3 border-1 rounded-2" onmouseover="showButton('#card1')" onmouseout="showButton('#card1')">
+      <img src="./assets/images/image1.png" height="150" class="card-img-top object-fit-none rounded-top" alt="...">
+      <div class="card-body">
+        <p class="card-text ">Nossa loja de café se encontra em um lugar, 100% fictício, porém caso se sinta interessado
+          pode vir tomar um café conosco em nossa sede em São José dos Campos.</p>
+        <div class="divButton">
+          <button class="Button" id="button1">COMPRAR AGORA</button>
+        </div>
+      </div>
+    </article>
+    <article class="card m-3 border-1 rounded-2" onmouseover="showButton('#card2')" onmouseout="showButton('#card2')">
+      <img src="./assets/images/image2.png" height="150" class="card-img-top object-fit-none rounded-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Nossa casa de café é a melhor da região, aqui você tem tudo que precisa, uma boa conversar,
+          bons amigos e um ambiente sem igual. Aproveite, pois Melhor que a DNC não existe!</p>
+        <div class="divButton">
+          <button class="Button" id="button2">COMPRAR AGORA</button>
+        </div>
+      </div>
+    </article>
+    <article class="card m-3 border-1 rounded-2" onmouseover="showButton('#card3')" onmouseout="showButton('#card3')">
+      <img src="./assets/images/image3.png" height="150" class="card-img-top object-fit-none rounded-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Por que a DNC? Porque podem contar sempre com um serviço genuíno, uma atmosfera acolhedora
+          e uma incrível xícara de café, torrado por especialistas e preparado de forma enriquecedora.</p>
+        <div class="divButton">
+          <button class="Button" id="button3">COMPRAR AGORA</button>
+        </div>
+      </div>
+    </article>
+    <article class="card m-3 border-1 rounded-2" onmouseover="showButton('#card4')" onmouseout="showButton('#card4')">
+      <img src="./assets/images/image4.png" height="150" class="card-img-top object-fit-none rounded-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">A escola especialista em formar talentos, com foco em empregabilidade, migração de carreira
+          e aumento de performance.</p>
+        <div class="divButton">
+          <button class="Button" id="button4">COMPRAR AGORA</button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <div class="modal fade" id="sobre" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content p-5">
+        <div>
+          <button type="button" class="btn-close float-end" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <h2 class="text-center fw-light">Quem somos nós? </h2>
+        <p class="p-3 fw-light text-center">Tudo o que fazemos procura respeitar essa conexão, desde nosso compromisso
+          com o café de melhor qualidade do mundo até a forma como nós interagimos com nossos clientes e nossas
+          comunidades para conduzir nosso negócio de modo responsável.
+        </p>
+
+        <img src="./assets/images/sobre.png" width="100" class="mx-auto">
+
+      </div>
+    </div>
+  </div>
+
+  <div id="fade" class="hide" onclick="closeModal()"></div>
+  <div id="modal" class="hide">
+    <div class="modal-close">
+      <button id="buttonCloseModal" onclick="closeModal()">x</button>
+    </div>
+    <div id="modal-header">
+      Atendimento
+    </div>
+    <div id="modal-body">
+      Rua José de Alencar, 111, Centro<br>
+      CEP: 12209-000 | +55 (11) 3333-8000
+    </div>
+    <div id="button-modal">
+      <button class="button-modal">ENTRAR EM CONTATO</button>
+    </div>
+  </div>
+
+</body>
+
+</html>
